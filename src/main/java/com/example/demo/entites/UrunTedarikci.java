@@ -3,7 +3,6 @@ package com.example.demo.entites;
 import jakarta.persistence.*;
 import lombok.Data;
 
-@Data
 @Entity
 @Table(name = "uruntedarikci")
 public class UrunTedarikci {
@@ -20,5 +19,27 @@ public class UrunTedarikci {
     @JoinColumn(name = "tedarikci_id")
     private Tedarikci tedarikci;
 
-    // Getters and Setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Urun getUrun() {
+        return urun;
+    }
+
+    public void setUrun(Urun urun) {
+        this.urun = urun;
+    }
+
+    public Tedarikci getTedarikci() {
+        return tedarikci;
+    }
+
+    public void setTedarikci(Tedarikci tedarikci) {
+        this.tedarikci = tedarikci;
+    }
 }

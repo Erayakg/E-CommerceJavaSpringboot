@@ -7,7 +7,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Data
 @Table(name = "sepet")
 public class Sepet {
 
@@ -23,4 +22,36 @@ public class Sepet {
 
     @OneToMany(mappedBy = "sepet")
     private List<SiparisDetay> siparisDetaylar;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Musteri getMusteri() {
+        return musteri;
+    }
+
+    public void setMusteri(Musteri musteri) {
+        this.musteri = musteri;
+    }
+
+    public String getTarih() {
+        return tarih;
+    }
+
+    public void setTarih(String tarih) {
+        this.tarih = tarih;
+    }
+
+    public List<SiparisDetay> getSiparisDetaylar() {
+        return siparisDetaylar;
+    }
+
+    public void setSiparisDetaylar(List<SiparisDetay> siparisDetaylar) {
+        this.siparisDetaylar = siparisDetaylar;
+    }
 }

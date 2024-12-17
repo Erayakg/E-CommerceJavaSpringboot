@@ -5,7 +5,6 @@ import lombok.Data;
 import java.time.LocalDateTime;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
-@Data
 @Entity
 @Table(name = "degerlendirme")
 public class Degerlendirme {
@@ -26,5 +25,51 @@ public class Degerlendirme {
     private String yorum;
     private String tarih;
 
-    // Getters and Setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Urun getUrun() {
+        return urun;
+    }
+
+    public void setUrun(Urun urun) {
+        this.urun = urun;
+    }
+
+    public Kullanici getKullanici() {
+        return kullanici;
+    }
+
+    public void setKullanici(Kullanici kullanici) {
+        this.kullanici = kullanici;
+    }
+
+    public Integer getPuan() {
+        return puan;
+    }
+
+    public void setPuan(Integer puan) {
+        this.puan = puan;
+    }
+
+    public String getYorum() {
+        return yorum;
+    }
+
+    public void setYorum(String yorum) {
+        this.yorum = yorum;
+    }
+
+    public String getTarih() {
+        return tarih;
+    }
+
+    public void setTarih(String tarih) {
+        this.tarih = tarih;
+    }
 }

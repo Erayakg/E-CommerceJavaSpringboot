@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
-@Data
 @Entity
 @Table(name = "odeme")
 public class Odeme {
@@ -21,4 +20,35 @@ public class Odeme {
 
     private String tarih;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Siparis getSiparis() {
+        return siparis;
+    }
+
+    public void setSiparis(Siparis siparis) {
+        this.siparis = siparis;
+    }
+
+    public int getTutar() {
+        return tutar;
+    }
+
+    public void setTutar(int tutar) {
+        this.tutar = tutar;
+    }
+
+    public String getTarih() {
+        return tarih;
+    }
+
+    public void setTarih(String tarih) {
+        this.tarih = tarih;
+    }
 }

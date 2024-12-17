@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Data
 @Table(name = "yoneticiler")
 public class Yoneticiler {
 
@@ -18,4 +17,27 @@ public class Yoneticiler {
 
     private String departman;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Kullanici getKullanici() {
+        return kullanici;
+    }
+
+    public void setKullanici(Kullanici kullanici) {
+        this.kullanici = kullanici;
+    }
+
+    public String getDepartman() {
+        return departman;
+    }
+
+    public void setDepartman(String departman) {
+        this.departman = departman;
+    }
 }

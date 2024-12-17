@@ -1,12 +1,10 @@
 package com.example.demo.entites;
 import jakarta.persistence.*;
 import lombok.Data;
-import jakarta.persistence.*;
 import java.util.List;
-import jakarta.persistence.*;
-import java.util.List;
+
+
 @Entity
-@Data
 @Table(name = "kullanici")
 public class Kullanici {
 
@@ -41,4 +39,107 @@ public class Kullanici {
     @OneToMany(mappedBy = "kullanici")
     private List<Adres> adresler;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getAd() {
+        return ad;
+    }
+
+    public void setAd(String ad) {
+        this.ad = ad;
+    }
+
+    public String getSoyad() {
+        return soyad;
+    }
+
+    public void setSoyad(String soyad) {
+        this.soyad = soyad;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSifre() {
+        return sifre;
+    }
+
+    public void setSifre(String sifre) {
+        this.sifre = sifre;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
+
+    public List<Bildirim> getBildirimler() {
+        return bildirimler;
+    }
+
+    public void setBildirimler(List<Bildirim> bildirimler) {
+        this.bildirimler = bildirimler;
+    }
+
+    public List<Degerlendirme> getDegerlendirmeler() {
+        return degerlendirmeler;
+    }
+
+    public void setDegerlendirmeler(List<Degerlendirme> degerlendirmeler) {
+        this.degerlendirmeler = degerlendirmeler;
+    }
+
+    public List<Favoriler> getFavoriler() {
+        return favoriler;
+    }
+
+    public void setFavoriler(List<Favoriler> favoriler) {
+        this.favoriler = favoriler;
+    }
+
+    public List<Mesajlar> getMesajlar() {
+        return mesajlar;
+    }
+
+    public void setMesajlar(List<Mesajlar> mesajlar) {
+        this.mesajlar = mesajlar;
+    }
+
+    public Musteri getMusteri() {
+        return musteri;
+    }
+
+    public void setMusteri(Musteri musteri) {
+        this.musteri = musteri;
+    }
+
+    public Yoneticiler getYonetici() {
+        return yonetici;
+    }
+
+    public void setYonetici(Yoneticiler yonetici) {
+        this.yonetici = yonetici;
+    }
+
+    public List<Adres> getAdresler() {
+        return adresler;
+    }
+
+    public void setAdresler(List<Adres> adresler) {
+        this.adresler = adresler;
+    }
 }
