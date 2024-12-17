@@ -1,2 +1,5 @@
-package com.example.demo.dao;public class user {
+package com.example.demo.dao;
+
+public class user {
+
 }
