@@ -1,7 +1,6 @@
 package com.example.demo.entites;
 
 import jakarta.persistence.*;
-import lombok.Data;
 
 @Entity
 @Table(name = "yoneticiler")
@@ -11,11 +10,19 @@ public class Yoneticiler {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    /**
+     * Burada Kullanici ile @OneToOne ilişkisi var.
+     * Circle problemi DTO üzerinden çözüleceği için
+     * ek anotasyon (@JsonIgnore, @JsonBackReference vs.) kullanmıyoruz.
+     * DTO katmanı sayesinde döngü engellenecek.
+     */
     @OneToOne
     @JoinColumn(name = "kullanici_id")
     private Kullanici kullanici;
 
     private String departman;
+
+    // ===================== GETTER - SETTER =====================
 
     public Long getId() {
         return id;
