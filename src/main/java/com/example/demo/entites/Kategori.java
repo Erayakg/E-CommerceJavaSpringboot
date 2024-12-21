@@ -1,5 +1,6 @@
 package com.example.demo.entites;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import jakarta.persistence.*;
@@ -16,6 +17,7 @@ public class Kategori {
     private String isim;
 
     @OneToMany(mappedBy = "kategori")
+    @JsonManagedReference
     private List<Urun> urunler;
 
     public Long getId() {

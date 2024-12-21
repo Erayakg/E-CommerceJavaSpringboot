@@ -1,4 +1,5 @@
 package com.example.demo.entites;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import jakarta.persistence.*;
@@ -18,6 +19,7 @@ public class Urun {
 
     @ManyToOne
     @JoinColumn(name = "kategori_id")
+    @JsonBackReference
     private Kategori kategori;
 
     @OneToMany(mappedBy = "urun")
